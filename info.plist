@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>029768D6-D627-4A28-9711-674EB08E8AF9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>847491DA-95F6-4F5B-A491-600FE0D619E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
 		<array>
 			<dict>
@@ -51,6 +64,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>70FCB34A-53CC-4F56-B651-70B5C16BA889</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>93F96964-7D97-468F-BED2-796C9960993F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>81AEA860-9EEC-49EC-8A43-E783F7CCD2A6</key>
 		<array>
 			<dict>
@@ -66,6 +92,19 @@
 		</array>
 		<key>93B2D9E6-B4FE-4731-B012-1100EE239E3A</key>
 		<array/>
+		<key>93F96964-7D97-468F-BED2-796C9960993F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>029768D6-D627-4A28-9711-674EB08E8AF9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Rhyd Lewis</string>
@@ -246,11 +285,115 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import re
+
+query = sys.argv[1]
+
+lines = []
+for line in query.splitlines():
+    lines.append(re.sub("^(\d+\.)", "#", line))
+
+sys.stdout.write("\n".join(lines))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>029768D6-D627-4A28-9711-674EB08E8AF9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>m2j</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Convert Markdown text to Jira markup</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>70FCB34A-53CC-4F56-B651-70B5C16BA889</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>847491DA-95F6-4F5B-A491-600FE0D619E3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>PATH=$PATH:/usr/local/bin/
+tmpfile=$(mktemp /tmp/alfred-tmp.XXXXXX)
+pbpaste &gt; "$tmpfile"
+j2m -j "$tmpfile"
+rm "$tmpfile"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>93F96964-7D97-468F-BED2-796C9960993F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>029768D6-D627-4A28-9711-674EB08E8AF9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>570</integer>
+		</dict>
 		<key>11D5721D-E45C-4D45-82C8-2CC370002271</key>
 		<dict>
 			<key>xpos</key>
@@ -265,12 +408,26 @@
 			<key>ypos</key>
 			<integer>180</integer>
 		</dict>
+		<key>70FCB34A-53CC-4F56-B651-70B5C16BA889</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>660</integer>
+		</dict>
 		<key>81AEA860-9EEC-49EC-8A43-E783F7CCD2A6</key>
 		<dict>
 			<key>xpos</key>
 			<integer>570</integer>
 			<key>ypos</key>
 			<integer>120</integer>
+		</dict>
+		<key>847491DA-95F6-4F5B-A491-600FE0D619E3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>880</integer>
+			<key>ypos</key>
+			<integer>660</integer>
 		</dict>
 		<key>876E633E-3DC9-435C-B2E8-21E07B864D4F</key>
 		<dict>
@@ -285,6 +442,13 @@
 			<integer>280</integer>
 			<key>ypos</key>
 			<integer>170</integer>
+		</dict>
+		<key>93F96964-7D97-468F-BED2-796C9960993F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>660</integer>
 		</dict>
 		<key>B33933A8-5BC4-4EC2-B4FB-B4C7B8DFA12F</key>
 		<dict>
