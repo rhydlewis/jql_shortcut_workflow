@@ -450,7 +450,7 @@ rm "$tmpfile"</string>
 				<key>keyword</key>
 				<string>m2j</string>
 				<key>subtext</key>
-				<string></string>
+				<string>This depends on J2M - see http://j2m.fokkezb.nl</string>
 				<key>text</key>
 				<string>Convert Markdown text to Jira markup</string>
 				<key>withspace</key>
