@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1C77D666-167A-459A-B679-E00507792022</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BC873C6D-55DE-4611-A9BB-6F66094D1B25</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>35B68F79-5114-4F19-80B6-63E1C2D9BC54</key>
 		<array>
 			<dict>
@@ -120,6 +133,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7172AF48-D1DC-48CC-93EC-78FF179F5478</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA79EA69-F7DA-4929-9C4E-8BE24513717F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>81AEA860-9EEC-49EC-8A43-E783F7CCD2A6</key>
 		<array>
 			<dict>
@@ -198,6 +224,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>set-jql-server</string>
+				<key>subtext</key>
+				<string>{query}/issues/?jql=</string>
+				<key>text</key>
+				<string>Set Jira Server</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>81AEA860-9EEC-49EC-8A43-E783F7CCD2A6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -217,27 +264,6 @@
 			<string>876E633E-3DC9-435C-B2E8-21E07B864D4F</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>set-jql-server</string>
-				<key>subtext</key>
-				<string>{query}/issues/?jql=</string>
-				<key>text</key>
-				<string>Set Jira Server</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>81AEA860-9EEC-49EC-8A43-E783F7CCD2A6</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -308,27 +334,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>set-confluence-server</string>
-				<key>subtext</key>
-				<string>{query}/dosearchsite.action?queryString=</string>
-				<key>text</key>
-				<string>Set Confluence Server</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>D4727E93-684A-4BE7-8150-9D23D6AD601C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -348,6 +353,27 @@
 			<string>3F518BC1-2601-42BE-A8F9-1D8BA54BA9F9</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>set-confluence-server</string>
+				<key>subtext</key>
+				<string>{query}/dosearchsite.action?queryString=</string>
+				<key>text</key>
+				<string>Set Confluence Server</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D4727E93-684A-4BE7-8150-9D23D6AD601C</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -551,6 +577,42 @@ rm "$tmpfile"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>edit-jql</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Edit JQL queries</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7172AF48-D1DC-48CC-93EC-78FF179F5478</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>~/Library/Application Support/Alfred 3/Workflow Data/net.rhydlewis.alfred.jiraconfluenceworkflow/jira_historic_queries.json</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>EA79EA69-F7DA-4929-9C4E-8BE24513717F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -571,6 +633,42 @@ rm "$tmpfile"</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>edit-conf</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Edit Confluence queries</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1C77D666-167A-459A-B679-E00507792022</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>~/Library/Application Support/Alfred 3/Workflow Data/net.rhydlewis.alfred.jiraconfluenceworkflow/confluence_historic_queries.json</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>BC873C6D-55DE-4611-A9BB-6F66094D1B25</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -589,6 +687,13 @@ rm "$tmpfile"</string>
 			<integer>270</integer>
 			<key>ypos</key>
 			<integer>470</integer>
+		</dict>
+		<key>1C77D666-167A-459A-B679-E00507792022</key>
+		<dict>
+			<key>xpos</key>
+			<integer>760</integer>
+			<key>ypos</key>
+			<integer>800</integer>
 		</dict>
 		<key>35B68F79-5114-4F19-80B6-63E1C2D9BC54</key>
 		<dict>
@@ -617,6 +722,13 @@ rm "$tmpfile"</string>
 			<integer>570</integer>
 			<key>ypos</key>
 			<integer>400</integer>
+		</dict>
+		<key>7172AF48-D1DC-48CC-93EC-78FF179F5478</key>
+		<dict>
+			<key>xpos</key>
+			<integer>760</integer>
+			<key>ypos</key>
+			<integer>680</integer>
 		</dict>
 		<key>77610590-9795-4425-80FE-64AB3628C95D</key>
 		<dict>
@@ -667,6 +779,13 @@ rm "$tmpfile"</string>
 			<key>ypos</key>
 			<integer>150</integer>
 		</dict>
+		<key>BC873C6D-55DE-4611-A9BB-6F66094D1B25</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
 		<key>D4727E93-684A-4BE7-8150-9D23D6AD601C</key>
 		<dict>
 			<key>xpos</key>
@@ -680,6 +799,13 @@ rm "$tmpfile"</string>
 			<integer>280</integer>
 			<key>ypos</key>
 			<integer>280</integer>
+		</dict>
+		<key>EA79EA69-F7DA-4929-9C4E-8BE24513717F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>680</integer>
 		</dict>
 		<key>F843EFD4-64A4-446D-BD20-C95A68A09AD7</key>
 		<dict>

@@ -83,7 +83,6 @@ def delete_query(wf, query, is_jira):
 
 def filter_queries(wf, search_string, is_jira):
     filtered_queries = wf.stored_data(get_key(is_jira))
-
     if search_string and filtered_queries:
         filtered_queries = wf.filter(search_string, filtered_queries)
         log.info("Found {0} possible matches: {1}".format(len(filtered_queries), filtered_queries))
