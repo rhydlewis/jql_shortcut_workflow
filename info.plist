@@ -77,6 +77,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>64EA292A-D3C3-4ECF-BC2A-6F7BBA881205</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
 		<array>
 			<dict>
@@ -174,11 +187,76 @@
 				<false/>
 			</dict>
 		</array>
+		<key>941E437F-E848-4E16-9E46-542E85FCB928</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>26B90FEC-2916-4ABB-8635-AD32789BE705</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B5ABB2B6-7E21-4E66-809A-594B11D44E42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>36BD64B6-027F-4728-AA3D-1B7D51F5D01B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C18B7568-586F-4CEC-8B7E-F088F5CDF933</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D3FC3753-C45D-4CA7-AB02-C31CB1B65592</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>39A6F8DC-2BA6-4F47-9752-7F23791559B7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D4727E93-684A-4BE7-8150-9D23D6AD601C</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>3F518BC1-2601-42BE-A8F9-1D8BA54BA9F9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E35DD7B5-7A90-4458-AC8B-C88C643366B3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -198,6 +276,94 @@
 	<string>Jira &amp; Confluence Workflow</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>set-jql-project</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Jira Project</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D3FC3753-C45D-4CA7-AB02-C31CB1B65592</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>set-jql-user</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Jira User</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B5ABB2B6-7E21-4E66-809A-594B11D44E42</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python config.py --project {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>39A6F8DC-2BA6-4F47-9752-7F23791559B7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python config.py --user {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>36BD64B6-027F-4728-AA3D-1B7D51F5D01B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -245,12 +411,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>set-jql-user</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set Jira User</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>941E437F-E848-4E16-9E46-542E85FCB928</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python jc-workflow.py --set-server {query}</string>
+				<string>python config.py --server {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -262,6 +449,29 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>876E633E-3DC9-435C-B2E8-21E07B864D4F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python config.py --password {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>26B90FEC-2916-4ABB-8635-AD32789BE705</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -554,6 +764,68 @@ rm "$tmpfile"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sje</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python jira-search.py -e "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Jira Epics</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C18B7568-586F-4CEC-8B7E-F088F5CDF933</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -636,6 +908,49 @@ rm "$tmpfile"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sjr</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python jira-search.py -r "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Recently Modified Jira items</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>64EA292A-D3C3-4ECF-BC2A-6F7BBA881205</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -669,6 +984,49 @@ rm "$tmpfile"</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sjm</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python jira-search.py -a</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Jira items assigned to me</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E35DD7B5-7A90-4458-AC8B-C88C643366B3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -695,6 +1053,13 @@ rm "$tmpfile"</string>
 			<key>ypos</key>
 			<integer>800</integer>
 		</dict>
+		<key>26B90FEC-2916-4ABB-8635-AD32789BE705</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
 		<key>35B68F79-5114-4F19-80B6-63E1C2D9BC54</key>
 		<dict>
 			<key>xpos</key>
@@ -702,12 +1067,33 @@ rm "$tmpfile"</string>
 			<key>ypos</key>
 			<integer>580</integer>
 		</dict>
+		<key>36BD64B6-027F-4728-AA3D-1B7D51F5D01B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>39A6F8DC-2BA6-4F47-9752-7F23791559B7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>760</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
 		<key>3F518BC1-2601-42BE-A8F9-1D8BA54BA9F9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>760</integer>
 			<key>ypos</key>
 			<integer>260</integer>
+		</dict>
+		<key>64EA292A-D3C3-4ECF-BC2A-6F7BBA881205</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>730</integer>
 		</dict>
 		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
 		<dict>
@@ -772,6 +1158,20 @@ rm "$tmpfile"</string>
 			<key>ypos</key>
 			<integer>400</integer>
 		</dict>
+		<key>941E437F-E848-4E16-9E46-542E85FCB928</key>
+		<dict>
+			<key>xpos</key>
+			<integer>920</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>630</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
 		<key>B33933A8-5BC4-4EC2-B4FB-B4C7B8DFA12F</key>
 		<dict>
 			<key>xpos</key>
@@ -779,12 +1179,33 @@ rm "$tmpfile"</string>
 			<key>ypos</key>
 			<integer>150</integer>
 		</dict>
+		<key>B5ABB2B6-7E21-4E66-809A-594B11D44E42</key>
+		<dict>
+			<key>xpos</key>
+			<integer>920</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
 		<key>BC873C6D-55DE-4611-A9BB-6F66094D1B25</key>
 		<dict>
 			<key>xpos</key>
 			<integer>930</integer>
 			<key>ypos</key>
 			<integer>800</integer>
+		</dict>
+		<key>C18B7568-586F-4CEC-8B7E-F088F5CDF933</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>600</integer>
+		</dict>
+		<key>D3FC3753-C45D-4CA7-AB02-C31CB1B65592</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>D4727E93-684A-4BE7-8150-9D23D6AD601C</key>
 		<dict>
@@ -799,6 +1220,13 @@ rm "$tmpfile"</string>
 			<integer>280</integer>
 			<key>ypos</key>
 			<integer>280</integer>
+		</dict>
+		<key>E35DD7B5-7A90-4458-AC8B-C88C643366B3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>860</integer>
 		</dict>
 		<key>EA79EA69-F7DA-4929-9C4E-8BE24513717F</key>
 		<dict>
