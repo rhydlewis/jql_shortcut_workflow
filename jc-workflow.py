@@ -6,10 +6,10 @@ import argparse
 import urllib
 
 from workflow import Workflow3, ICON_WEB, ICON_ERROR
+from config import JIRA_SERVER_KEY
 
 JIRA_KEY = 'jira_historic_queries'
 JIRA_SUFFIX = "/issues/?jql="
-JIRA_SERVER = 'jira-server'
 
 CONFLUENCE_KEY = 'confluence_historic_queries'
 CONFLUENCE_SUFFIX = "/dosearchsite.action?queryString="
@@ -52,9 +52,9 @@ def main(wf):
 
     if args.server:
         if args.is_jira:
-            set_server(wf, args.server, JIRA_SUFFIX, JIRA_SERVER)
+            wf.settings[JIRA_SERVER_KEY] = args.server
         else:
-            set_server(wf, args.server, CONFLUENCE_SUFFIX, CONFLUENCE_SERVER)
+            wf.settings[CONFLUENCE_SERVER] = args.server
 
 
 def find_matching_queries(wf, search_string, is_jira):
@@ -127,20 +127,16 @@ def create_query_item(wf, url, query):
     wf.add_item(title=title, subtitle=subtitle, icon=ICON_WEB, arg=arg, valid=True)
 
 
-def set_server(wf, server, suffix, key):
-    if suffix not in server:
-        server = server + suffix
-
+def set_server(wf, server, key):
     wf.settings[key] = server
-
 
 
 def get_url(wf, is_jira):
     if is_jira:
-        url = wf.settings.get(JIRA_SERVER)
+        url = wf.settings.get(JIRA_SERVER_KEY) + JIRA_SUFFIX
         server_type = "Jira"
     else:
-        url = wf.settings.get(CONFLUENCE_SERVER)
+        url = wf.settings.get(CONFLUENCE_SERVER) + CONFLUENCE_SUFFIX
         server_type = "Confluence"
 
     if url is None:

@@ -8,6 +8,7 @@ from workflow import Workflow3
 from lib.jira import JIRA
 
 PROJECT_KEY = 'project'
+JIRA_SERVER_KEY = 'jira-server'
 
 log = None
 
@@ -30,7 +31,7 @@ def get_project(wf):
 
 
 def get_server(wf):
-    server = wf.settings.get('server', None)
+    server = wf.settings.get(JIRA_SERVER_KEY, None)
     return server
 
 
@@ -56,7 +57,7 @@ def main(wf):
 
     if args.server:# and 'http://' in args.server:
         log.info('Saving new server: ' + args.server)
-        wf.settings['server'] = args.server
+        wf.settings[JIRA_SERVER_KEY] = args.server
         return 0
 
     if args.user:

@@ -200,6 +200,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9871852C-65A5-4412-AD41-F378E8DA6EFD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B5ABB2B6-7E21-4E66-809A-594B11D44E42</key>
 		<array>
 			<dict>
@@ -915,7 +928,7 @@ rm "$tmpfile"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>sjr</string>
+				<string>sju</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1024,6 +1037,49 @@ rm "$tmpfile"</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>E35DD7B5-7A90-4458-AC8B-C88C643366B3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sjr</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python jira-search.py -m</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Jira items recently created by me</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9871852C-65A5-4412-AD41-F378E8DA6EFD</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1164,6 +1220,13 @@ rm "$tmpfile"</string>
 			<integer>920</integer>
 			<key>ypos</key>
 			<integer>120</integer>
+		</dict>
+		<key>9871852C-65A5-4412-AD41-F378E8DA6EFD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>980</integer>
 		</dict>
 		<key>9CE411C7-92C2-4546-B20D-4E5FB2E30EBF</key>
 		<dict>

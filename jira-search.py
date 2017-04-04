@@ -2,7 +2,7 @@ import argparse
 import sys
 from workflow import Workflow3, ICON_WARNING
 from lib.jira import JIRA
-from config import PROJECT_KEY
+from config import PROJECT_KEY, JIRA_SERVER_KEY
 
 
 def main(wf):
@@ -16,7 +16,7 @@ def main(wf):
     jira = connect_to_jira(wf)
 
     # run query
-    search_results = jira.search_issues(query)
+    search_results = jira.search_issues(query, maxResults=10)
 
     # per result, create feedback
     create_feedback(wf, jira, search_results)
@@ -35,7 +35,8 @@ def create_feedback(wf, jira, issues):
         if issue.key:
             # full_story = jira.issue(issue.key)
             title = ', '.join([issue.key, issue.fields.summary])
-            subtitle = ' - '.join([issue.fields.creator.displayName, issue.fields.project.name, issue.fields.status.name])
+            subtitle = ' - '.join([issue.fields.issuetype.name, issue.fields.creator.displayName,
+                                   issue.fields.project.name, issue.fields.status.name])
             arg = issue.permalink()
             wf.add_item(title=title, subtitle=subtitle, arg=arg, copytext=arg, valid=True)
                         # autocomplete=server + "/browse/" + issue.key,
@@ -54,7 +55,7 @@ def connect_to_jira(wf):
 
 
 def get_server(wf):
-    server = wf.settings.get('server', None)
+    server = wf.settings.get(JIRA_SERVER_KEY, None)
     return server
 
 
@@ -73,6 +74,7 @@ def parse_args():
     parser.add_argument('-e', '--search-epics', dest='search_epic', nargs='?', default=None)
     parser.add_argument('-r', '--search-recently-modified', dest='search_recently_modified', nargs='?', default=None)
     parser.add_argument('-a', '--assigned-to-me', action='store_true')
+    parser.add_argument('-m', '--recently-created-by-me', action='store_true')
     log.info(workflow.args)
     return parser.parse_args(workflow.args)
 
@@ -89,10 +91,13 @@ def create_query(wf, args):
         query += "issuetype = epic and text ~ \"{0}\" ".format(args.search_epic)
 
     if args.search_recently_modified:
-        query += "text ~ \"{0}\" order by updatedDate DESC".format(args.search_epic)
+        query += "text ~ \"{0}\" order by updatedDate DESC ".format(args.search_epic)
 
     if args.assigned_to_me:
-        query += "assignee = currentUser()"
+        query += "assignee = currentUser() "
+
+    if args.recently_created_by_me:
+        query += "reporter = currentUser() order by createdDate DESC "
 
     log.info(query)
     return query
